@@ -11,11 +11,11 @@ const message_error=document.getElementById('message_error');
 
 form.addEventListener('submit',(e)=>{
    var email_check=/^([A-Za-z0-9_\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-   var name_check=/^[a-zA-Z\s'-]+$/;
+   var name_check=/^[a-zA-Z\s']+$/;
    var phone_check=/^\d{10}$/;
 
 
-    if(Name.value.trim() === '' || Name.value == null){
+    if(Name.value.trim() === ''){
         e.preventDefault();
         name_error.innerHTML="*Name is required";
     }
