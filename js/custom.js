@@ -121,23 +121,23 @@
 				 	st = $this.scrollTop(),
 				 	navbar = $('.site-navbar');
 
-			if ( st > 200 ) {
+			if ( st > 80 ) {
 				navbar.addClass('scrolled');
 			} else {
 				navbar.removeClass('scrolled awake');
 			}
 
-			if ( navbar.hasClass('scrolled') && st > 300 ) {
+			if ( navbar.hasClass('scrolled') && st > 120 ) {
 		   	if (st > lastScrollTop){
-		      // if (navbar.hasClass('scrolled')) {
-		      	// navbar.removeClass('awake');
-		      	// navbar.addClass('sleep');
-		      // }
+		      if (navbar.hasClass('scrolled')) {
+		      	navbar.removeClass('awake');
+		      	navbar.addClass('sleep');
+		      }
 		   	} else {
-		      // if (navbar.hasClass('scrolled')) {
-		      	// navbar.addClass('awake');
-		      	// navbar.removeClass('sleep');
-		      // }
+		      if (navbar.hasClass('scrolled')) {
+		      	navbar.addClass('awake');
+		      	navbar.removeClass('sleep');
+		      }
 		   	}
 		   	lastScrollTop = st;
 		  }
